@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Wings - Alitas y Papas Vintage</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Pide las mejores alitas y papas con el auténtico estilo y sabor de Chicago Wings. Haz tu pedido en línea y recíbelo por WhatsApp.">
+  <meta name="keywords" content="alitas, papas, salchipapa, chicago wings, comida rapida, pedir alitas, bogota">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-wings">CHICAGO</span>
+        <span class="logo-text">WINGS</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link">Inicio</a>
+        <a href="#menu-seccion" class="nav-link">Menú</a>
+        <a href="#nosotros" class="nav-link">Contacto</a>
+        <a href="admin.html" class="nav-link admin-btn-nav"><i class="fa-solid fa-user-shield"></i> Admin</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-toggle-btn" id="cart-toggle-btn">
+          <i class="fa-solid fa-shopping-basket"></i>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Portada) -->
+  <section class="hero" id="hero">
+    <div class="decorations">
+      <div class="star star-1">★</div>
+      <div class="star star-2">✦</div>
+      <div class="star star-3">★</div>
+      <div class="star star-4">✦</div>
+    </div>
+    
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge-vintage">EST. 2023</div>
+        <h1 class="hero-title">CHICAGO <br><span class="highlight">WINGS</span></h1>
+        <p class="hero-subtitle">Las mejores alitas acompañadas de las salsas más sabrosas y las papas más crocantes. ¡El sabor auténtico de la época dorada en tu mesa!</p>
+        <div class="hero-actions">
+          <a href="#menu-seccion" class="btn btn-primary btn-large">
+            <i class="fa-solid fa-utensils"></i> Ver Menú / Ordenar
+          </a>
+          <a href="https://wa.me/573012289416" target="_blank" class="btn btn-outline btn-large">
+            <i class="fa-brands fa-whatsapp"></i> Escríbenos
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-image-bg"></div>
+        <img src="assets/hero.png" alt="Chicago Wings Mascotas" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Banner -->
+  <section class="info-banner">
+    <div class="container info-grid">
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-motorcycle"></i></div>
+        <div>
+          <h3>Domicilio Rápido</h3>
+          <p>Llega caliente a tu puerta</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-pepper-hot"></i></div>
+        <div>
+          <h3>Salsas Especiales</h3>
+          <p>Desde BBQ Maple a Búfalo Picante</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+        <div>
+          <h3>Horario</h3>
+          <p>Jueves a Domingo: 6:00 PM - 10:00 PM<br>(Sábados hasta las 11:00 PM)<br>¡Festivos abiertos!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-seccion" id="menu-seccion">
+    <div class="container">
+      <div class="section-header">
+        <div class="star-divider">✦ ✦ ✦</div>
+        <h2 class="section-title">Nuestra Carta</h2>
+        <p class="section-desc">Selecciona tus combos y arma tu pedido a tu gusto. Todos los combos incluyen papas.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-category="alitas">
+          <i class="fa-solid fa-drumstick-bite"></i> Combos de Alitas
+        </button>
+        <button class="tab-btn" data-category="papas">
+          <i class="fa-solid fa-stroopwafel"></i> Papas Especiales
+        </button>
+        <button class="tab-btn" data-category="adiciones">
+          <i class="fa-solid fa-plus"></i> Adiciones
+        </button>
+        <button class="tab-btn" data-category="bebidas">
+          <i class="fa-solid fa-wine-glass-empty"></i> Bebidas
+        </button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Javascript will populate items here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="nosotros" id="nosotros">
+    <div class="container grid-2">
+      <div class="nosotros-info">
+        <div class="badge-vintage">CONTACTO</div>
+        <h2 class="section-title text-left">¿Antojo de Alitas?</h2>
+        <p>Visítanos en nuestro local o haz tu pedido directo para que te lo llevemos. Si tienes alguna duda, evento especial o necesitas un pedido personalizado, escríbenos directamente a nuestro WhatsApp de atención al cliente.</p>
+        
+        <ul class="contact-list">
+          <li>
+            <span class="icon-wrap"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <strong>Dirección</strong>
+              <p>Cl. 24 #61a-42, Itagüi, La Estrella, Antioquia, Colombia</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon-wrap"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <strong>Teléfono / Domicilios</strong>
+              <p>+57 301 228 9416</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon-wrap"><i class="fa-brands fa-whatsapp"></i></span>
+            <div>
+              <strong>WhatsApp Directo</strong>
+              <a href="https://wa.me/573012289416" target="_blank">+57 301 228 9416</a>
+            </div>
+          </li>
+          <li>
+            <span class="icon-wrap"><i class="fa-brands fa-instagram"></i></span>
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/chicagowings23/profilecard/?igsh=MTZvdDN2dHU2b2VrZQ==" target="_blank">@chicagowings23</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="nosotros-map">
+        <div class="vintage-card map-card">
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot map-icon"></i>
+            <h3>Encuéntranos en el Mapa</h3>
+            <p>Cl. 24 #61a-42, Itagüi, La Estrella, Antioquia, Colombia</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cl.+24+%2361a-42%2C+Itag%C3%BCi%2C+La+Estrella%2C+Antioquia%2C+Colombia" target="_blank" class="btn btn-primary btn-small">Ver en Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-wings">CHICAGO</span>
+          <span class="logo-text">WINGS</span>
+        </a>
+        <p>El auténtico sabor vintage en alitas y papas cargadas. Calidad, crocancia y salsas increíbles desde 2023.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Enlaces rápidos</h3>
+        <a href="#hero">Inicio</a>
+        <a href="#menu-seccion">Nuestra Carta</a>
+        <a href="#nosotros">Contacto</a>
+        <a href="admin.html">Panel de Administración</a>
+      </div>
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/chicagowings23/profilecard/?igsh=MTZvdDN2dHU2b2VrZQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p class="copyright">&copy; 2026 Chicago Wings. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2><i class="fa-solid fa-shopping-basket"></i> Tu Pedido</h2>
+      <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+    </div>
+    
+    <div class="cart-body" id="cart-body">
+      <!-- Items will render here -->
+      <div class="empty-cart" id="empty-cart">
+        <i class="fa-solid fa-folder-open empty-icon"></i>
+        <p>Tu carrito está vacío.</p>
+        <a href="#menu-seccion" class="btn btn-primary btn-small" id="go-to-menu-btn">Ver la carta</a>
+      </div>
+      <div class="cart-items" id="cart-items-container"></div>
+    </div>
+    
+    <!-- Checkout Form Section (visible only when cart has items) -->
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <div class="cart-totals">
+        <div class="totals-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0</span>
+        </div>
+        <div class="totals-row">
+          <span>Envío</span>
+          <span id="cart-shipping">$4.000</span>
+        </div>
+        <div class="totals-row total-final">
+          <span>Total</span>
+          <span id="cart-total">$0</span>
+        </div>
+      </div>
+      
+      <form class="checkout-form" id="checkout-form">
+        <h3>Datos de Entrega</h3>
+        
+        <div class="form-group">
+          <label for="cust-name">Nombre completo *</label>
+          <input type="text" id="cust-name" placeholder="Ej. Juan Pérez" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="cust-phone">WhatsApp / Celular *</label>
+          <input type="tel" id="cust-phone" placeholder="Ej. 3201234567" required>
+        </div>
+
+        <div class="form-group">
+          <label>Tipo de Servicio *</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="delivery-type" value="domicilio" checked required>
+              Domicilio
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="delivery-type" value="recoger">
+              Recoger en local
+            </label>
+          </div>
+        </div>
+        
+        <div class="form-group" id="address-group">
+          <label for="cust-address">Dirección de Entrega *</label>
+          <input type="text" id="cust-address" placeholder="Ej. Calle 10 # 5-20 Apto 302">
+          <span style="font-size: 11px; color: var(--color-primary); display: block; margin-top: 6px; font-weight: 500; line-height: 1.3;">
+            <i class="fa-solid fa-circle-info"></i> El costo del envío te lo dará un asesor por WhatsApp apenas envíes el pedido.
+          </span>
+        </div>
+        
+        <div class="form-group">
+          <label>Método de Pago *</label>
+          <div style="background: #fdfdfd; border: 1px dashed var(--color-primary); padding: 12px; border-radius: 6px; font-size: 12px; color: var(--color-dark); display: flex; align-items: flex-start; gap: 8px; box-sizing: border-box; text-align: left;">
+            <i class="fa-solid fa-credit-card" style="color: var(--color-primary); font-size: 16px; margin-top: 2px;"></i>
+            <div>
+              <strong style="display: block; margin-bottom: 2px;">Coordinado por WhatsApp</strong>
+              <span style="font-size: 11px; color: var(--color-dark-muted); line-height: 1.3; display: block;">
+                Los detalles de pago (transferencia a Nequi/Bancolombia o efectivo) se acordarán directamente con el asesor al enviar tu pedido.
+              </span>
+            </div>
+          </div>
+          <!-- Campo oculto para mantener compatibilidad con la lectura en JS -->
+          <input type="hidden" id="payment-method" value="Acordar por WhatsApp">
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large checkout-submit-btn" id="checkout-submit-btn">
+          <i class="fa-brands fa-whatsapp"></i> Confirmar y Enviar por WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Customization (Combo / Potato sauces selection) -->
+  <div class="modal-overlay" id="custom-modal-overlay"></div>
+  <div class="modal" id="custom-modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Personaliza tu producto</h2>
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <!-- Generated dynamically based on the product -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" id="modal-cancel-btn">Cancelar</button>
+      <button class="btn btn-primary" id="modal-confirm-btn">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <!-- Order Success Notification Toast -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <div class="toast-content">
+      <h4>¡Pedido Registrado!</h4>
+      <p>Redirigiendo a WhatsApp...</p>
+    </div>
+  </div>
+
+
+
+  <!-- JS Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
