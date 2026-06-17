@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Control - Chicago Wings Admin</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+  
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-wings">CHICAGO</span>
+        <span class="logo-text">ADMIN PANEL</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Volver a la Tienda</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-small" id="refresh-orders-btn">
+          <i class="fa-solid fa-arrows-rotate"></i> Actualizar
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Overlay (Simple Security Demonstration) -->
+  <div class="login-overlay active" id="login-overlay">
+    <div class="vintage-card login-card">
+      <div class="star-divider">✦ ✦ ✦</div>
+      <h2>Acceso Administrador</h2>
+      <p>Ingresa la contraseña para gestionar los pedidos.</p>
+      
+      <form id="login-form">
+        <div class="form-group" style="text-align: left;">
+          <label for="admin-pass">Contraseña *</label>
+          <input type="password" id="admin-pass" placeholder="Ingresa contraseña de prueba" required>
+          <span style="font-size: 11px; color: var(--color-dark-muted); margin-top: 5px; display: block;">Pista: la contraseña es <strong>chicago123</strong></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Ingresar al Panel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Main Dashboard -->
+  <main class="container admin-dashboard" style="display: none;" id="admin-dashboard-content">
+    <div class="dashboard-header">
+      <div>
+        <h1 class="dashboard-title">Monitoreo de Pedidos</h1>
+        <p class="dashboard-subtitle">Visualiza y gestiona las órdenes de Chicago Wings en tiempo real.</p>
+      </div>
+      <div class="stats-cards">
+        <div class="stat-mini-card">
+          <span class="stat-num" id="stat-pending">0</span>
+          <span class="stat-label">Pendientes</span>
+        </div>
+        <div class="stat-mini-card" style="background-color: var(--color-secondary);">
+          <span class="stat-num" id="stat-preparing">0</span>
+          <span class="stat-label">Preparando</span>
+        </div>
+        <div class="stat-mini-card" style="background-color: var(--color-success); color: white;">
+          <span class="stat-num" id="stat-delivered" style="color: white;">0</span>
+          <span class="stat-label">Entregados</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filter-bar vintage-card">
+      <div class="filter-group">
+        <span class="filter-title"><i class="fa-solid fa-filter"></i> Filtrar por Estado:</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-status="Todos">Todos</button>
+          <button class="filter-btn" data-status="Pendiente">Pendientes</button>
+          <button class="filter-btn" data-status="Preparando">Preparando</button>
+          <button class="filter-btn" data-status="Enviado">Enviados</button>
+          <button class="filter-btn" data-status="Entregado">Entregados</button>
+          <button class="filter-btn" data-status="Cancelado">Cancelados</button>
+        </div>
+      </div>
+      <div class="search-group">
+        <input type="text" id="search-input" placeholder="Buscar por cliente o teléfono...">
+      </div>
+    </div>
+
+    <!-- Orders Board -->
+    <div class="orders-board">
+      <div class="orders-list" id="orders-list">
+        <!-- Javascript will inject orders here -->
+        <div class="no-orders" id="no-orders-msg">
+          <i class="fa-solid fa-circle-info empty-icon"></i>
+          <h3>Sin pedidos en este momento</h3>
+          <p>Los nuevos pedidos realizados por clientes aparecerán aquí automáticamente.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sound effect for new orders -->
+  <audio id="notification-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-500.wav" preload="auto"></audio>
+  
+  <!-- Sound effect for paid orders (cash register sound) -->
+  <audio id="payment-sound" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-200.wav" preload="auto"></audio>
+
+  <!-- Notification Container for Real-time alerts -->
+  <div id="admin-notifications" style="position: fixed; top: 90px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; pointer-events: none;"></div>
+
+  <!-- JS Scripts -->
+  <script src="js/admin.js"></script>
+</body>
+</html>
